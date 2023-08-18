@@ -1,0 +1,26 @@
+<gt-app-banner title="{{ title }}"></gt-app-banner>
+
+<mat-card class="flow-pressure-card">
+  <mat-card-content class="flow-pressure-card-content">
+    <h2>Flow/Pressure</h2>
+    <div class="main-div">
+      <div class="flow-pressure">
+        <nz-slider class="flow-slider" nzVertical [nzMarks]="flowrate_marks" [ngModel]="flow_values().flowrate" (ngModelChange)="setFlow($event)"></nz-slider>
+        <div class="permeability_values">
+          <div class="label-container">
+            <label class="name-label">Flow</label>
+            <label class="value-label">{{ flow_values().flowrate }}</label>
+          </div>
+          <div class="label-container">
+            <label class="name-label">Pressure</label>
+            <label class="value-label">{{ flow_values().pressure }}</label>
+          </div>
+        </div>
+      </div>
+      <div class="logs">
+        <label class="name-label">Serial com logs</label>
+        <pre>{{ logs }} </pre>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

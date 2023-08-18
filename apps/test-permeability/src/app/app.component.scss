@@ -1,0 +1,58 @@
+* {
+  //border: blue solid 1px;
+}
+
+.flow-pressure-card {
+  margin: 1rem;
+  .flow-pressure-card-content {
+    h2 {
+      border-bottom: black solid 1px;
+    }
+    .main-div {
+      display: flex;
+      .flow-pressure {
+        display: flex;
+        flex-direction: column;
+        min-width: 8rem;
+        .flow-slider {
+          height: 22rem;
+          margin: 1rem;
+        }
+        .permeability_values {
+          .label-container {
+            display: flex;
+            justify-content: space-between;
+            .name-label {
+            }
+            .value-label {
+              margin-left: 0.5rem;
+              font-weight: 600;
+              min-width: 3rem;
+              text-align: center;
+            }
+          }
+        }
+      }
+      .logs {
+        flex: auto;
+        display: flex;
+        flex-direction: column;
+        .name-label {
+          margin: 1rem 0 0 1rem;
+          font-weight: 600;
+          border-bottom: black solid 1px;
+        }
+        pre {
+          margin: 1rem;
+          color: white;
+          background: black;
+          flex: auto;
+          font-family: 'Lucida Console', 'Menlo', 'Monaco', 'Courier', monospace;
+          height: 26rem;
+          overflow: scroll;
+          scroll-behavior: auto;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+[workspace]
+members = [
+    "libs/rs/utils"
+]
+exclude = [
+  "apps/test-permeability/src-tauri"
+]
