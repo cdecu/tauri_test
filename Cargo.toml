@@ -3,5 +3,5 @@ members = [
     "libs/rs/utils"
 ]
 exclude = [
-  "apps/test-permeability/src-tauri"
+  "apps/perm-simulator/src-tauri"
 ]

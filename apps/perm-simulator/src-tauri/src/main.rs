@@ -18,7 +18,7 @@ use tokio_util::codec::Decoder;
 #[derive(Clone)]
 pub struct AppState {
   app_handle: Option<tauri::AppHandle>,
-  serial_port: Option<String>,
+  _serial_port: Option<String>,
   app_id: i32,
 }
 
@@ -26,7 +26,7 @@ impl AppState {
   pub fn new() -> Self {
     Self {
       app_handle: None,
-      serial_port: None,
+      _serial_port: None,
       app_id: 123,
     }
   }
@@ -45,16 +45,16 @@ async fn main() {
 
   // let tty_path = "/tmp/gt_com";
   let tty_path = "/dev/pts/8";
-  let mut port = tokio_serial::new(tty_path, 9600)
-    .open_native_async()
-    .expect("Unable to open port");
+  // let mut port = tokio_serial::new(tty_path, 9600)
+  //   .open_native_async()
+  //   .expect("Unable to open port");
 
   #[cfg(unix)]
-  port
-    .set_exclusive(false)
-    .expect("Unable to set serial port exclusive to false");
+  // port
+  //   .set_exclusive(false)
+  //   .expect("Unable to set serial port exclusive to false");
 
-  let mut reader = LineCodec.framed(port);
+  // let mut reader = LineCodec.framed(port);
 
   tauri::Builder::default()
     .invoke_handler(router.into_handler())

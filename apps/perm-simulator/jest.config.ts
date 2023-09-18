@@ -1,9 +1,9 @@
 /* eslint-disable */
 export default {
-  displayName: 'test-permeability',
+  displayName: 'perm-simulator',
   preset: '../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
-  coverageDirectory: '../../coverage/apps/test-permeability',
+  coverageDirectory: '../../coverage/apps/perm-simulator',
   transform: {
     '^.+\\.(ts|mjs|js|html)$': [
       'jest-preset-angular',

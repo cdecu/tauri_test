@@ -48,10 +48,17 @@
           background: black;
           flex: auto;
           font-family: 'Lucida Console', 'Menlo', 'Monaco', 'Courier', monospace;
-          height: 26rem;
+          height: 24rem;
           overflow: scroll;
           scroll-behavior: auto;
         }
+      }
+    }
+    .tools-buttons{
+      border: blue solid 1px;
+      button{
+        padding: 0;
+        margin: 0;
       }
     }
   }

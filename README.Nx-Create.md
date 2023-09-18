@@ -1,12 +1,12 @@
 ## Nx workspace with NG, Tauri, ...
-https://oblique.bit.admin.ch/home.html
-https://qwik.builder.io/    Qwik or Angular
-https://github.com/oscartbeaumont/specta
-https://json-schema.org/learn/getting-started-step-by-step
-https://github.com/MatsDK/TauRPC
-https://github.com/madonoharu/tsify
-https://github.com/Aleph-Alpha/ts-rs
-https://github.com/arabidopsis/typescript-definitions
+- https://oblique.bit.admin.ch/home.html
+- https://qwik.builder.io/    Qwik or Angular
+- https://github.com/oscartbeaumont/specta
+- https://json-schema.org/learn/getting-started-step-by-step
+- https://github.com/MatsDK/TauRPC
+- https://github.com/madonoharu/tsify
+- https://github.com/Aleph-Alpha/ts-rs
+- https://github.com/arabidopsis/typescript-definitions
 
 
 
@@ -35,9 +35,9 @@ nx g @nx/angular:component banner --project=ng-compos --export -d
 ```
 nx lint ng-compos
 nx test ng-compos
-nx lint test-permeability
-nx test test-permeability
-nx serve test-permeability
+nx lint perm-simulator
+nx test perm-simulator
+nx serve perm-simulator
 ```
 - Remove ZONE
   bootstrapApplication with { provide: NgZone, useClass: ɵNoopNgZone }]   
@@ -47,7 +47,7 @@ nx serve test-permeability
 ```
 npm i @angular/material
 npm i ng-zorro-antd
-nx g @angular/material:ng-add --project=test-permeability
+nx g @angular/material:ng-add --project=perm-simulator
 ```
 If needed add to project.json "styles":  
 ```
@@ -68,18 +68,18 @@ npm i -D @tauri-apps/cli
 npm i -D @nxrs/cargo
 npm i @tauri-apps/api
 cargo install tauri-cli
-cd apps/test-permeability
+cd apps/perm-simulator
 cargo tauri init
 cargo tauri dev
 ```
-add to main Cargo.toml workspace exclude = ["apps/test-permeability/src-tauri"]
+add to main Cargo.toml workspace exclude = ["apps/perm-simulator/src-tauri"]
 
 
 ### Add [TauRPC](https://github.com/MatsDK/TauRPC)
 see example https://github.com/MatsDK/threejs-tauri-test
 ```
 npm i taurpc
-cd apps/test-permeability/src-tauri
+cd apps/perm-simulator/src-tauri
 cargo add tokio
 cargo add taurpc
 ```

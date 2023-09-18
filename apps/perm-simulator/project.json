@@ -1,9 +1,9 @@
 {
-  "name": "test-permeability",
+  "name": "perm-simulator",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
   "prefix": "gt",
-  "sourceRoot": "apps/test-permeability/src",
+  "sourceRoot": "apps/perm-simulator/src",
   "tags": [],
   "targets": {
     "build": {
@@ -12,21 +12,20 @@
         "{options.outputPath}"
       ],
       "options": {
-        "outputPath": "dist/apps/test-permeability",
-        "index": "apps/test-permeability/src/index.html",
-        "main": "apps/test-permeability/src/main.ts",
-        "polyfills": [
-        ],
-        "tsConfig": "apps/test-permeability/tsconfig.app.json",
+        "outputPath": "dist/apps/perm-simulator",
+        "index": "apps/perm-simulator/src/index.html",
+        "main": "apps/perm-simulator/src/main.ts",
+        "polyfills": [],
+        "tsConfig": "apps/perm-simulator/tsconfig.app.json",
         "assets": [
-          "apps/test-permeability/src/favicon.ico",
-          "apps/test-permeability/src/assets"
+          "apps/perm-simulator/src/favicon.ico",
+          "apps/perm-simulator/src/assets"
         ],
         "styles": [
           "@angular/material/prebuilt-themes/indigo-pink.css",
           "node_modules/ng-zorro-antd/style/index.min.css",
           "node_modules/ng-zorro-antd/slider/style/index.min.css",
-          "apps/test-permeability/src/styles.scss"
+          "apps/perm-simulator/src/styles.scss"
         ],
         "scripts": []
       },
@@ -61,10 +60,10 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "browserTarget": "test-permeability:build:production"
+          "browserTarget": "perm-simulator:build:production"
         },
         "development": {
-          "browserTarget": "test-permeability:build:development"
+          "browserTarget": "perm-simulator:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -72,7 +71,7 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "test-permeability:build"
+        "browserTarget": "perm-simulator:build"
       }
     },
     "lint": {
@@ -82,8 +81,8 @@
       ],
       "options": {
         "lintFilePatterns": [
-          "apps/test-permeability/**/*.ts",
-          "apps/test-permeability/**/*.html"
+          "apps/perm-simulator/**/*.ts",
+          "apps/perm-simulator/**/*.html"
         ]
       }
     },
@@ -93,7 +92,7 @@
         "{workspaceRoot}/coverage/{projectRoot}"
       ],
       "options": {
-        "jestConfig": "apps/test-permeability/jest.config.ts",
+        "jestConfig": "apps/perm-simulator/jest.config.ts",
         "passWithNoTests": true
       },
       "configurations": {
@@ -106,7 +105,7 @@
     "serve-static": {
       "executor": "@nx/web:file-server",
       "options": {
-        "buildTarget": "test-permeability:build"
+        "buildTarget": "perm-simulator:build"
       }
     }
   }

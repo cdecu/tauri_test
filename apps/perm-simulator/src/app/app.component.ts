@@ -7,10 +7,11 @@ import { createTauRPCProxy } from '../lib/bindings';
 import { NgComposModule } from '@gt2/ui/ng-compos';
 import { calculatePressure } from '@gt2/ts/utils';
 import { UnlistenFn } from '@tauri-apps/api/event';
+import {MatIconModule} from "@angular/material/icon";
 
 @Component({
   standalone: true,
-  imports: [FormsModule, MatCardModule, MatSliderModule, NzSliderModule, NgComposModule],
+  imports: [FormsModule, MatCardModule, MatSliderModule, NzSliderModule, NgComposModule, MatIconModule],
   selector: 'gt-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
@@ -59,6 +60,11 @@ export class AppComponent implements OnInit, OnDestroy {
 
   setFlow($event: number) {
     this.flowrate_value.set($event);
+    this.changeDetector.detectChanges();
+  }
+
+  clearLogs() {
+    this.logs = '';
     this.changeDetector.detectChanges();
   }
 }

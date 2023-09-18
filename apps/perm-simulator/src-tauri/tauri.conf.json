@@ -1,12 +1,12 @@
 {
   "build": {
-    "beforeBuildCommand": "nx build test-permeability",
-    "beforeDevCommand": "nx serve test-permeability",
+    "beforeBuildCommand": "nx build perm-simulator",
+    "beforeDevCommand": "nx serve perm-simulator",
     "devPath": "http://localhost:4200/",
-    "distDir": "../../../dist/apps/test-permeability"
+    "distDir": "../../../dist/apps/perm-simulator"
   },
   "package": {
-    "productName": "test-permeability",
+    "productName": "perm-simulator",
     "version": "0.1.0"
   },
   "tauri": {
@@ -57,7 +57,7 @@
         "fullscreen": false,
         "height": 640,
         "resizable": false,
-        "title": "test-permeability",
+        "title": "perm-simulator",
         "width": 1024
       }
     ]
